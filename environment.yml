@@ -1,0 +1,20 @@
+name: gaussian-direct128
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pytorch=2.1.2
+  - pytorch-cuda=12.1
+  - numpy=1.26
+  - pandas=2.2
+  - scipy=1.10
+  - scikit-learn=1.4
+  - gemmi=0.7.5
+  - tqdm
+  - lightning=2.6
+  - pytest
+  - pip
+  - pip:
+      - -e .

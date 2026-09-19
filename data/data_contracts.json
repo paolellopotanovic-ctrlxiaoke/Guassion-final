@@ -1,0 +1,41 @@
+{
+  "checkpoint": {
+    "epoch": 11,
+    "path": "checkpoints/direct128_e11.pt",
+    "sha256": "10ec32e0138c8150ee08f2b35e17115b4d90cdd1ad915f46e1e36134bc495a7c"
+  },
+  "notes": [
+    "PINDER structures and large NPZ caches are not redistributed in this Git repository.",
+    "Use data_contracts.json to verify locally rebuilt manifests and preprocessing outputs.",
+    "The three bundled examples are small reproducibility fixtures and are not a benchmark."
+  ],
+  "schema_version": "gaussian_direct128_data_contract_v1",
+  "test_panels": [
+    {
+      "name": "mmseq_holo_clean1000",
+      "path": "laboratory://M4-Gaussian-PPBS/work/m4_e00p_official_non_test_sideclean_global_cap5_rate_le075_20260914/three_clean_panels_actual_training_deleak_20260914/mmseq_holo_clean1000_manifest.csv",
+      "rows": 989,
+      "sha256": "5a4e1fae09c54c17bee6cc630ef537202c01063654195cb86513d38ccd8539fb"
+    },
+    {
+      "name": "mmseq_state_clean886",
+      "path": "laboratory://M4-Gaussian-PPBS/work/m4_e00p_official_non_test_sideclean_global_cap5_rate_le075_20260914/three_clean_panels_actual_training_deleak_20260914/mmseq_state_clean886_manifest.csv",
+      "rows": 875,
+      "sha256": "678da5d4e6cfbafda3b8c92d2c4e6cd257ba40baad5b582ed4f7102c11dae2e3"
+    },
+    {
+      "name": "bc30_holo_clean820",
+      "path": "laboratory://M4-Gaussian-PPBS/work/m4_e00p_official_non_test_sideclean_global_cap5_rate_le075_20260914/three_clean_panels_actual_training_deleak_20260914/bc30_holo_clean820_manifest.csv",
+      "rows": 815,
+      "sha256": "334adabf21718f06e0e24b074ce11192d1049da023d1eb30b30a847cf0f6c612"
+    }
+  ],
+  "training_set": {
+    "compact_inventory": "laboratory://M4-Gaussian-PPBS/work/pinder_official_non_test_sideclean_full_cap5_rate_le075_20260914/cache_validation.json",
+    "compact_npz_dir": "laboratory://M4-Gaussian-PPBS/work/pinder_official_non_test_sideclean_full_cap5_rate_le075_20260914/semantic_npz",
+    "path": "laboratory://M4-Gaussian-PPBS/work/pinder_official_non_test_sideclean_full_cap5_rate_le075_20260914/pinder_official_non_test_sideclean_global_cap5_rate_le075_local_hydrated.csv",
+    "rows": 20802,
+    "selection": "PINDER official non-test sideclean; global cluster cap=5; positive_rate<=0.75; 20,801 structures",
+    "sha256": "e89be73a747b9b5ecafbf7ca5551f0c3395e41a44585dce88513db2a3b3565ec"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": "gaussian_direct128_app_config_v1",
+  "architecture": {
+    "gaussian_dim": 32,
+    "co_update_rounds": 1
+  },
+  "runtime": {
+    "accelerator": "cpu",
+    "devices": 1,
+    "precision": "32",
+    "num_workers": 0,
+    "log_every": 1
+  },
+  "training": {
+    "output_dir": "../runs/smoke",
+    "data": {
+      "train_manifest": "../examples/example_manifest.csv",
+      "train_compact_dir": "../examples/compact_npz",
+      "expected_train_rows": 3
+    },
+    "optimizer": {
+      "epochs": 1,
+      "schedule_epochs": 1,
+      "local_batch_size": 1
+    }
+  }
+}

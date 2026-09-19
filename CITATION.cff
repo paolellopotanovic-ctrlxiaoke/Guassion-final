@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: If you use this software, cite the Gaussian-direct128 preprint and checkpoint release.
+title: Gaussian-direct128
+version: 0.1.0
+date-released: "2026-09-19"
+authors:
+  - familynames: Lin
+    givennames: Ziqian
+keywords:
+  - protein-binding site prediction
+  - structural bioinformatics
+  - Gaussian geometry
+  - PeSTo
+license: CC-BY-NC-SA-4.0

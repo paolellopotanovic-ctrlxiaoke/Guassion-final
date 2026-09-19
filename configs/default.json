@@ -1,0 +1,66 @@
+{
+  "schema_version": "gaussian_direct128_app_config_v1",
+  "architecture": {
+    "experiment": "scratch",
+    "gaussian_dim": 128,
+    "gaussian_architecture": "vg",
+    "direct_protein_head": true,
+    "direct_protein_residual": false,
+    "bypass_gaussian": false,
+    "co_update_rounds": 3,
+    "dropout": 0.1
+  },
+  "runtime": {
+    "accelerator": "gpu",
+    "devices": 2,
+    "precision": "16-mixed",
+    "seed": 42,
+    "num_workers": 2,
+    "log_every": 50
+  },
+  "training": {
+    "output_dir": "../runs/gaussian_direct128",
+    "data": {
+      "train_manifest": "${TRAIN_MANIFEST}",
+      "train_compact_dir": "${TRAIN_COMPACT_DIR}",
+      "expected_train_rows": 20801
+    },
+    "optimizer": {
+      "epochs": 20,
+      "schedule_epochs": 20,
+      "local_batch_size": 4,
+      "pesto_lr": 0.0001,
+      "gaussian_lr": 0.0001,
+      "warmup_ratio": 0.05,
+      "min_lr_ratio": 0.1,
+      "weight_decay": 0.0001,
+      "pos_weight_factor": 0.5
+    }
+  },
+  "preprocessing": {
+    "manifest": "${PREPROCESS_MANIFEST}",
+    "output_dir": "${PREPROCESS_COMPACT_DIR}",
+    "workers": 16,
+    "torch_threads": 1,
+    "max_num_nn": 64,
+    "payload": "training",
+    "progress_every": 1000,
+    "chunksize": 8
+  },
+  "inference": {
+    "checkpoint": "../checkpoints/direct128_e11.pt",
+    "manifest": "../examples/example_manifest.csv",
+    "compact_dir": "../examples/compact_npz",
+    "output": "../predictions/example_predictions.csv",
+    "device": "auto",
+    "batch_size": 1,
+    "threshold": 0.5
+  },
+  "evaluation": {
+    "manifest": "../examples/example_manifest.csv",
+    "compact_dir": "../examples/compact_npz",
+    "output": "../results/example_metrics.json",
+    "device": "auto",
+    "batch_size": 1
+  }
+}
