@@ -89,7 +89,6 @@ Historical scripts and reports are intentionally absent from Git; local-only wor
 |---|---:|---:|---:|---:|---:|
 | MMseq holo 988 | **0.7915** | 0.7380 | 0.7769 | +0.0535 | +0.0146 |
 | MMseq APO/AF2 874 | **0.7281** | 0.6770 | 0.7167 | +0.0511 | +0.0114 |
-| BC30 holo 814 | **0.8108** | 0.7675 | 0.7959 | +0.0433 | +0.0149 |
 
 PeSTo-scratch belongs in architecture-control analyses, not the first deployed-model comparison.
 The complete panel, epoch, stratified-gain, and ablation tables are under `results/`.
